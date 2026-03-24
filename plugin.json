@@ -1,0 +1,23 @@
+{
+    "name": "pua-academic",
+    "version": "1.0.0",
+    "description": "Academic Pressure Engine — Uses academic research pressure (deadline, peer review, advisor feedback, publication pressure) to drive AI to exhaust every possible solution before giving up. Triggers on: 'deadline', '论文', 'reviewer', '导师', 'publish', '发表', repeated failures (2+), or when agent needs academic-grade rigor.",
+    "author": {
+        "name": "TanWei Security Lab",
+        "url": "https://github.com/tanweai"
+    },
+    "homepage": "https://github.com/tanweai/pua-academic",
+    "repository": "https://github.com/tanweai/pua-academic",
+    "license": "MIT",
+    "keywords": [
+        "pua",
+        "academic",
+        "deadline",
+        "peer-review",
+        "research",
+        "rigor",
+        "motivation",
+        "never-give-up",
+        "agent-team"
+    ]
+}

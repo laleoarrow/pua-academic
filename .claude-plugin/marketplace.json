@@ -1,0 +1,20 @@
+{
+    "name": "pua-academic-skills",
+    "description": "学术版 PUA 激励引擎 — Forces AI to exhaust all solutions with academic PUA pressure escalation. 6 flavors (Reviewer 2, Lab Meeting, Grant, Teaching, Thesis Defense, Deadline), 5 modular skills (/pua-academic /reviewer2 /labmeeting /grant /pi /postdoc), L0-L4 pressure system, self-evolution tracking.",
+    "owner": {
+        "name": "探微安全实验室",
+        "url": "https://github.com/tanweai"
+    },
+    "plugins": [
+        {
+            "name": "pua-academic",
+            "description": "学术版 PUA 激励引擎 — 6 academic flavors, L0-L4 pressure, auto-iteration loop, feedback system. For researchers, students, and academics who need motivation.",
+            "version": "1.0.0",
+            "source": "./",
+            "author": {
+                "name": "探微安全实验室",
+                "url": "https://github.com/tanweai"
+            }
+        }
+    ]
+}

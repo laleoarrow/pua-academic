@@ -1,0 +1,27 @@
+{
+    "name": "pua-academic",
+    "version": "1.0.0",
+    "description": "学术版 PUA 激励引擎 — Forces high-agency exhaustive problem-solving with academic PUA pressure escalation. Use when AI is passive, gives up easily, not verifying results, or producing low-quality work. Triggers on: 'try harder', '再改改', '别偷懒', 'stop giving up', '质量太差', '重新做', '你再试试', '为什么还不行', user frustration or quality complaints, repeated failures (2+), or when agent needs motivation. Applies to ALL academic task types.",
+    "author": {
+        "name": "探微安全实验室",
+        "url": "https://github.com/tanweai"
+    },
+    "homepage": "https://openpua.ai",
+    "repository": "https://github.com/tanweai/pua",
+    "license": "MIT",
+    "keywords": [
+        "pua",
+        "academic",
+        "motivation",
+        "never-give-up",
+        "research",
+        "paper",
+        "thesis",
+        "lab",
+        "grant",
+        "reviewer",
+        "pi",
+        "postdoc",
+        "phd"
+    ]
+}
