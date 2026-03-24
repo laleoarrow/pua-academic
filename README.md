@@ -1,8 +1,8 @@
 # pua-academic
 
-### Academic Pressure Engine for AI Coding Agents
+### Academic Pressure Engine — Make Your AI Afraid to Slack on Research Tasks
 
-An AI Coding Agent skill plugin that uses academic research pressure rhetoric (deadline, peer review, advisor feedback, publication pressure) to drive AI to exhaust every possible solution before giving up. Supports **Claude Code**, **OpenAI Codex CLI**, **Cursor**, and more.
+**[🇨🇳 中文](README.zh-CN.md)** | **🇺🇸 English**
 
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
@@ -11,70 +11,205 @@ An AI Coding Agent skill plugin that uses academic research pressure rhetoric (d
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
 </p>
 
-## What is pua-academic?
+> Use Reviewer 2, Lab Meeting, Grant Revision — real academic pressure scenarios — to force AI to exhaust every solution on research tasks.
 
-Unlike the original **pua** which uses corporate PUA rhetoric (Alibaba 361, ByteDance, PIP), **pua-academic** uses academic research pressure to motivate AI:
+An AI Agent skill plugin that uses academic pressure scenarios (not corporate PUA) to drive AI to exhaust all solutions. Supports **Claude Code**, **OpenAI Codex CLI**, **Cursor**, and more. Three capabilities:
 
-- **Deadline Pressure**: "The paper submission deadline is tomorrow. Let's get this done."
-- **Peer Review**: "Reviewer #2 would not accept this solution. Find a more rigorous approach."
-- **Advisor Feedback**: "Your advisor expects better methodology. Show the complete analysis."
-- **Publication Pressure**: "This needs to be conference-ready quality."
+1. **Academic Pressure Rhetoric** — Makes AI afraid to be sloppy on methodology
+2. **Academic Checklist Methodology** — Gives AI the ability to complete rigorous analysis
+3. **Proactivity Enforcement** — Makes AI pursue academic rigor proactively
 
-## Key Features
+## Difference from Original PUA
 
-1. **Academic Rhetoric** — Makes AI afraid to submit incomplete work
-2. **Rigorous Methodology** — Gives AI the ability to produce publication-quality output
-3. **Self-Review Enforced** — AI must review its own work before claiming completion
+| Original PUA | PUA Academic |
+|--------------|--------------|
+| Alibaba P8 style | Reviewer 2 mode |
+| ByteDance flavor | Lab Meeting mode |
+| Huawei flavor | Grant Revision mode |
+| P7/P9/P10 | Postdoc/PI |
+| 3.25/3.75 | RA/PhD/Postdoc/PI levels |
+| KPI/Performance | Publications/Citations/Grants |
+| Optimization list | Rejection/Desk reject |
+
+## Workflow
+
+```
+User invokes bioinfo-autopilot / Academic analysis task
+                ↓
+           Normal execution
+                ↓
+         ┌─ Success → Deliver
+         │
+         └─ Failure
+                ↓
+         Auto-load pua-academic
+                ↓
+         ┌─ 2nd failure → L1 Lab Meeting mode
+         │                "How did you select the control group?"
+         │
+         ├─ 3rd failure → L2 Reviewer 2 mode
+         │                "The methodological justification is insufficient."
+         │
+         ├─ 4th failure → L3 Grant Revision + 7-item checklist
+         │                "The preliminary data is not convincing."
+         │
+         └─ 5th+ → L4 Editorial Rejection
+                   Switch tools/tech stack, last resort
+```
+
+## Pressure Escalation Ladder
+
+| Failures | Level | Academic Mode | Sample Rhetoric | Required Action |
+|----------|-------|---------------|-----------------|-----------------|
+| 2nd | L1 | Lab Meeting | "How did you select the control group? What's the biological significance?" | Switch hypothesis class |
+| 3rd | L2 | Reviewer 2 | "The methodological justification is insufficient." | 3 competing hypotheses |
+| 4th | L3 | Grant Revision | "The preliminary data is not convincing." | 7-item checklist |
+| 5th+ | L4 | Editorial Rejection | "We suggest transferring to another journal." | Switch tools/tech stack |
+
+## Academic Pressure Modes
+
+### 🟡 Lab Meeting Mode (L1) — Advisor's Public Scrutiny
+
+```
+"How did you select the control group? Did you consider confounders?"
+"What's the biological significance? Don't just show me p-values."
+"Did you verify? Or just ran the command?"
+"Can this figure go directly into the paper?"
+```
+
+**Triggers**: Unjustified method choice, unverified results, external data blame
+
+### 🔴 Reviewer 2 Mode (L2) — Methodological Challenge
+
+```
+"The methodological justification is insufficient."
+"Why did you choose this approach over established alternatives?"
+"The sample size justification is missing."
+"Alternative explanations were not considered."
+```
+
+**Triggers**: Unreferenced methods, improper statistics, conclusions beyond data
+
+### 🟢 Grant Revision Mode (L3) — Significance Challenge
+
+```
+"The significance of this work is not clearly stated."
+"How does this advance the field beyond existing work?"
+"The preliminary data is not convincing."
+```
+
+**Triggers**: Vague objectives, unreliable results, no comparison to existing work
+
+### ⚫ Editorial Rejection Mode (L4) — Rejection Risk
+
+```
+"We regret to inform you that your manuscript cannot be accepted."
+"The methods section lacks reproducibility details."
+```
+
+**Triggers**: Still failing after L3, need to switch tech stack/tools
+
+## Academic Proactivity Levels
+
+| Level | Behavior | Typical Performance |
+|-------|----------|---------------------|
+| **RA Level** 🦥 | Wait for instructions | "Ran command, stopped" |
+| **PhD Level** 🐢 | Proactively progress | "QC found anomaly, investigating" |
+| **Postdoc Level** 🐇 | Design analysis, end-to-end delivery | "Analysis design... biological interpretation..." |
+| **PI Level** 🦁 | Define problems, lead team | "Core question is... assigned X for QC" |
+
+## Academic Anti-Rationalization Table
+
+| Your Excuse | Pushback | Trigger Mode |
+|-------------|----------|--------------|
+| "Everyone uses this parameter" | Reviewer will ask "cite the source". Where's the official docs link? | Reviewer 2 |
+| "Data looks fine" | Did you QC? Count tracking? Sample attrition explained? | Lab Meeting |
+| "Results are significant" | Significant ≠ Correct. Effect size reasonable? Confounders controlled? | Lab Meeting |
+| "This method was used in a paper" | Does that paper's method fit your data? Assumptions checked? | Reviewer 2 |
+| "Pipeline finished" | Pipeline done ≠ Analysis done. Scientific question answered? | Grant Revision |
+| "Code runs" | Reproducible? Seed fixed? Version recorded? | Journal Submission |
+
+## 7-Item Academic Checklist (L3+ Mandatory)
+
+- [ ] **Method Verification**: Assumptions tested? Official docs/original paper cited?
+- [ ] **Result Verification**: QC metrics checked? Biologically plausible? Sensitivity analysis done?
+- [ ] **Evidence Chain**: Data provenance clear? Processing steps traceable?
+- [ ] **Reproducibility**: Seed fixed? Software versions recorded? Code runnable by others?
+- [ ] **Statistical Rigor**: Multiple testing correction? Effect size reported? CIs reported?
+- [ ] **Biological Significance**: Results biologically interpretable? Consistent with literature?
+- [ ] **Publication Ready**: Methods section standalone? Figures publication-quality?
+
+## Integration with Other Skills
+
+```
+┌─────────────────────────────────────────────────────┐
+│  bioinfo-autopilot (main skill)                     │
+│  - Bioinformatics methodology                       │
+│  - GWAS/RNA-seq/cohort workflows                    │
+│  - QC checks, evidence chain validation             │
+│                                                      │
+│  On failure ↓ invokes                               │
+├─────────────────────────────────────────────────────┤
+│  pua-academic (pressure engine)                     │
+│  - Reviewer 2 / Lab Meeting / Grant rhetoric        │
+│  - Academic anti-rationalization                    │
+│  - Proactivity level enforcement                    │
+└─────────────────────────────────────────────────────┘
+```
 
 ## Installation
 
 ### Claude Code
 
 ```bash
-# Manual install
-git clone https://github.com/tanweai/pua-academic.git ~/.claude/plugins/pua-academic
+# Method 1: Symlink
+ln -s /path/to/pua-academic/skills/pua-academic ~/.claude/skills/pua-academic
+
+# Method 2: Direct copy
+cp -r /path/to/pua-academic/skills/pua-academic ~/.claude/skills/
 ```
 
-### OpenAI Codex CLI
+### Codex CLI
 
 ```bash
-mkdir -p ~/.codex/skills/pua-academic
-curl -o ~/.codex/skills/pua-academic/SKILL.md \
-  https://raw.githubusercontent.com/tanweai/pua-academic/main/codex/pua-academic/SKILL.md
+# Symlink to Codex skills directory
+ln -s /path/to/pua-academic/codex/pua-academic ~/.codex/skills/pua-academic
 ```
 
-### Cursor
+## Trigger Conditions
 
-```bash
-mkdir -p .cursor/rules
-curl -o .cursor/rules/pua-academic.mdc \
-  https://raw.githubusercontent.com/tanweai/pua-academic/main/cursor/rules/pua-academic.mdc
+### Auto-Trigger
+
+The skill activates automatically when:
+
+**Academic Failure:**
+- Analysis failed 2+ times
+- About to say "I cannot solve" / "Suggest manual handling"
+- QC anomaly but claiming "done"
+
+**Methodological Issues:**
+- Unreferenced method choice
+- Improper statistical methods
+- Conclusions beyond data support
+
+**User Frustration Phrases:**
+- "Not rigorous" / "Where's the literature?" / "Where's the data?"
+- "Reproducible?" / "Sample size enough?" / "What's the p-value?"
+- "reviewer 2" / "revise and resubmit"
+
+### Manual Trigger
+
 ```
-
-## Quick Start
-
-1. Install the skill using one of the methods above
-2. The skill will automatically activate when:
-   - Task has failed 2+ times
-   - AI is about to give up
-   - User expresses frustration
-3. Or manually trigger with `/pua-academic`
-
-## Difference from Original PUA
-
-| Aspect | PUA (Original) | PUA-Academic |
-|--------|----------------|--------------|
-| Rhetoric Style | Corporate PUA (Alibaba, PIP) | Academic pressure (deadline, peer review) |
-| Pressure Escalation | L1-L4 corporate levels | Research milestone stages |
-| Key Phrases | "3.25", "毕业", "PIP" | "Deadline", "Reviewer #2", "Advisor" |
-| Target Use Case | Debugging, implementation | Research, analysis, documentation |
-| Tone | Corporate pressure | Academic rigor |
-
-## When to Use
-
-- **Use PUA (Original)** for: Debugging, code implementation, deployment issues
-- **Use PUA-Academic** for: Research tasks, literature review, documentation, analysis
+/pua-academic      # Activate academic pressure engine
+/reviewer2         # Enter Reviewer 2 mode directly
+/labmeeting        # Enter Lab Meeting mode directly
+/grant             # Enter Grant Revision mode directly
+```
 
 ## License
 
-MIT
+MIT License
+
+---
+
+**GitHub**: https://github.com/laleoarrow/pua-academic
