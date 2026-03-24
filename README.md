@@ -206,6 +206,22 @@ The skill activates automatically when:
 /grant             # Enter Grant Revision mode directly
 ```
 
+## Recommended for Medical/Bioinformatics Tasks
+
+For medical and bioinformatics tasks, we recommend using with **bioinfo-autopilot**:
+
+```
+bioinfo-autopilot  ←→  pua-academic
+       ↓                      ↓
+  Bioinformatics           Academic Pressure
+  methodology              Engine
+       ↓                      ↓
+  GWAS/RNA-seq/           Reviewer 2/Lab Meeting
+  Single-cell/Cohort      /Grant Revision
+```
+
+**bioinfo-autopilot GitHub**: https://github.com/laleoarrow/bioinfo-autopilot
+
 ## License
 
 MIT License

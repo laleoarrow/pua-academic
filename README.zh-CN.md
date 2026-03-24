@@ -207,6 +207,21 @@ ln -s /path/to/pua-academic/codex/pua-academic ~/.codex/skills/pua-academic
 /grant             # 直接进入 Grant Revision 模式
 ```
 
+## 医学/生信场景推荐搭配
+
+对于医学、生物信息学相关任务，推荐与 **bioinfo-autopilot** 配合使用：
+
+```
+bioinfo-autopilot  ←→  pua-academic
+     ↓                       ↓
+  生信分析方法论         学术压力引擎
+     ↓                       ↓
+  GWAS/RNA-seq/         Reviewer 2/Lab Meeting
+  单细胞/队列分析        /Grant Revision
+```
+
+**bioinfo-autopilot GitHub**: https://github.com/laleoarrow/bioinfo-autopilot
+
 ## License
 
 MIT License
