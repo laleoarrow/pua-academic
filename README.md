@@ -1,8 +1,8 @@
 # pua-academic
 
-### Academic Pressure Engine — Make Your AI Afraid to Slack on Research Tasks
+### 学术压力引擎 — 让你的 AI 不敢在学术任务上摆烂
 
-**[🇨🇳 中文](README.zh-CN.md)** | **🇺🇸 English**
+**🇨🇳 中文**
 
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
@@ -11,75 +11,75 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
 </p>
 
-> Use Reviewer 2, Lab Meeting, Grant Revision — real academic pressure scenarios — to force AI to exhaust every solution on research tasks.
+> 用 Reviewer 2、Lab Meeting、Grant Revision 等学术界真实场景压力，让 AI 在科研任务上穷尽一切方案。
 
-An AI Agent skill plugin that uses academic pressure scenarios (not corporate PUA) to drive AI to exhaust all solutions. Supports **Claude Code**, **OpenAI Codex CLI**, **Cursor**, and more. Three capabilities:
+一个 AI Agent 技能插件，用学术界压力场景（而非互联网大厂 PUA）驱动 AI 穷尽所有方案。支持 **Claude Code**、**OpenAI Codex CLI**、**Cursor** 等。三重能力：
 
-1. **Academic Pressure Rhetoric** — Makes AI afraid to be sloppy on methodology
-2. **Academic Checklist Methodology** — Gives AI the ability to complete rigorous analysis
-3. **Proactivity Enforcement** — Makes AI pursue academic rigor proactively
+1. **学术压力话术** — 让 AI 不敢在方法学上敷衍
+2. **学术检查方法论** — 让 AI 有能力完成严谨分析
+3. **能动性鞭策** — 让 AI 主动追求学术严谨而非被动等待
 
-## Difference from Original PUA
+## 与原版 PUA 的区别
 
-| Original PUA | PUA Academic |
-|--------------|--------------|
-| Alibaba P8 style | Reviewer 2 mode |
-| ByteDance flavor | Lab Meeting mode |
-| Huawei flavor | Grant Revision mode |
+| 原版 PUA | PUA Academic |
+|----------|--------------|
+| 阿里 P8 风格 | Reviewer 2 模式 |
+| 字节味 | Lab Meeting 模式 |
+| 华为味 | Grant Revision 模式 |
 | P7/P9/P10 | Postdoc/PI |
-| 3.25/3.75 | RA/PhD/Postdoc/PI levels |
-| KPI/Performance | Publications/Citations/Grants |
-| Optimization list | Rejection/Desk reject |
+| 3.25/3.75 | RA/PhD/Postdoc/PI 级 |
+| KPI/绩效 | 发表/引用/Grant |
+| 优化名单 | 退稿/拒稿 |
 
-## Workflow
-
-```
-User invokes bioinfo-autopilot / Academic analysis task
-                ↓
-           Normal execution
-                ↓
-         ┌─ Success → Deliver
-         │
-         └─ Failure
-                ↓
-         Auto-load pua-academic
-                ↓
-         ┌─ 2nd failure → L1 Lab Meeting mode
-         │                "How did you select the control group?"
-         │
-         ├─ 3rd failure → L2 Reviewer 2 mode
-         │                "The methodological justification is insufficient."
-         │
-         ├─ 4th failure → L3 Grant Revision + 7-item checklist
-         │                "The preliminary data is not convincing."
-         │
-         └─ 5th+ → L4 Editorial Rejection
-                   Switch tools/tech stack, last resort
-```
-
-## Pressure Escalation Ladder
-
-| Failures | Level | Academic Mode | Sample Rhetoric | Required Action |
-|----------|-------|---------------|-----------------|-----------------|
-| 2nd | L1 | Lab Meeting | "How did you select the control group? What's the biological significance?" | Switch hypothesis class |
-| 3rd | L2 | Reviewer 2 | "The methodological justification is insufficient." | 3 competing hypotheses |
-| 4th | L3 | Grant Revision | "The preliminary data is not convincing." | 7-item checklist |
-| 5th+ | L4 | Editorial Rejection | "We suggest transferring to another journal." | Switch tools/tech stack |
-
-## Academic Pressure Modes
-
-### 🟡 Lab Meeting Mode (L1) — Advisor's Public Scrutiny
+## 工作流程
 
 ```
-"How did you select the control group? Did you consider confounders?"
-"What's the biological significance? Don't just show me p-values."
-"Did you verify? Or just ran the command?"
-"Can this figure go directly into the paper?"
+用户调用 bioinfo-autopilot / 学术分析任务
+                ↓
+           正常执行分析
+                ↓
+         ┌─ 成功 → 交付
+         │
+         └─ 失败
+                ↓
+         自动加载 pua-academic
+                ↓
+         ┌─ 第2次失败 → L1 Lab Meeting 话术
+         │              "你这个对照组怎么选的？"
+         │
+         ├─ 第3次失败 → L2 Reviewer 2 话术
+         │              "The methodological justification is insufficient."
+         │
+         ├─ 第4次失败 → L3 Grant Revision + 7项检查清单
+         │              "The preliminary data is not convincing."
+         │
+         └─ 第5次+ → L4 Editorial Rejection
+                      换工具/技术栈，最后手段
 ```
 
-**Triggers**: Unjustified method choice, unverified results, external data blame
+## 压力升级阶梯
 
-### 🔴 Reviewer 2 Mode (L2) — Methodological Challenge
+| 失败次数 | 等级 | 学术模式 | PUA 话术示例 | 强制动作 |
+|---------|------|----------|-------------|---------|
+| 第 2 次 | L1 | Lab Meeting | "你这个对照组怎么选的？生物学意义是什么？" | 换假设类 |
+| 第 3 次 | L2 | Reviewer 2 | "The methodological justification is insufficient." | 3 个竞争假设 |
+| 第 4 次 | L3 | Grant Revision | "The preliminary data is not convincing." | 7 项检查清单 |
+| 第 5 次+ | L4 | Editorial Rejection | "建议转投其他期刊。" | 换工具/技术栈 |
+
+## 学术压力模式详解
+
+### 🟡 Lab Meeting 模式 (L1) — 导师当众质疑
+
+```
+"你这个对照组怎么选的？有没有考虑混杂因素？"
+"这个结果的生物学意义是什么？不要只给我看 P 值。"
+"你验证过吗？还是只是跑完命令就算了？"
+"这个 figure 能直接放到 paper 里吗？"
+```
+
+**触发条件**：方法选择无依据、结果未验证、数据问题归因外部
+
+### 🔴 Reviewer 2 模式 (L2) — 方法学质疑
 
 ```
 "The methodological justification is insufficient."
@@ -88,9 +88,9 @@ User invokes bioinfo-autopilot / Academic analysis task
 "Alternative explanations were not considered."
 ```
 
-**Triggers**: Unreferenced methods, improper statistics, conclusions beyond data
+**触发条件**：方法选择无引用、统计方法不当、结论超出数据支撑
 
-### 🟢 Grant Revision Mode (L3) — Significance Challenge
+### 🟢 Grant Revision 模式 (L3) — Significance 质疑
 
 ```
 "The significance of this work is not clearly stated."
@@ -98,66 +98,67 @@ User invokes bioinfo-autopilot / Academic analysis task
 "The preliminary data is not convincing."
 ```
 
-**Triggers**: Vague objectives, unreliable results, no comparison to existing work
+**触发条件**：分析目标模糊、结果不可靠、与现有工作无对比
 
-### ⚫ Editorial Rejection Mode (L4) — Rejection Risk
+### ⚫ Editorial Rejection 模式 (L4) — 退稿风险
 
 ```
 "We regret to inform you that your manuscript cannot be accepted."
 "The methods section lacks reproducibility details."
 ```
 
-**Triggers**: Still failing after L3, need to switch tech stack/tools
+**触发条件**：L3 后仍失败，需要换技术栈/工具
 
-## Academic Proactivity Levels
+## 学术能动性等级
 
-| Level | Behavior | Typical Performance |
-|-------|----------|---------------------|
-| **RA Level** 🦥 | Wait for instructions | "Ran command, stopped" |
-| **PhD Level** 🐢 | Proactively progress | "QC found anomaly, investigating" |
-| **Postdoc Level** 🐇 | Design analysis, end-to-end delivery | "Analysis design... biological interpretation..." |
-| **PI Level** 🦁 | Define problems, lead team | "Core question is... assigned X for QC" |
+| 等级 | 行为特征 | 典型表现 |
+|------|----------|----------|
+| **RA 级** 🦥 | 等指令、只执行 | "跑完命令就停"、"报错就问用户" |
+| **PhD 级** 🐢 | 主动推进、能发现问题 | "QC 发现异常，正在排查" |
+| **Postdoc 级** 🐇 | 设计分析、端到端交付 | "分析流程设计如下...生物学解释是..." |
+| **PI 级** 🦁 | 定义问题、带团队 | "核心问题是...我安排了 X 负责 QC" |
 
-## Academic Anti-Rationalization Table
+## 学术抗合理化表
 
-| Your Excuse | Pushback | Trigger Mode |
-|-------------|----------|--------------|
-| "Everyone uses this parameter" | Reviewer will ask "cite the source". Where's the official docs link? | Reviewer 2 |
-| "Data looks fine" | Did you QC? Count tracking? Sample attrition explained? | Lab Meeting |
-| "Results are significant" | Significant ≠ Correct. Effect size reasonable? Confounders controlled? | Lab Meeting |
-| "This method was used in a paper" | Does that paper's method fit your data? Assumptions checked? | Reviewer 2 |
-| "Pipeline finished" | Pipeline done ≠ Analysis done. Scientific question answered? | Grant Revision |
-| "Code runs" | Reproducible? Seed fixed? Version recorded? | Journal Submission |
+| 你的借口 | 反杀 | 触发模式 |
+|----------|------|----------|
+| "这个参数大家都这么用" | Reviewer 会问"cite the source"。官方文档链接在哪？ | Reviewer 2 |
+| "数据看起来没问题" | QC 了吗？count 追踪了吗？sample attrition 解释了吗？ | Lab Meeting |
+| "结果显著就行了" | 显著 ≠ 正确。effect size 合理吗？混杂控制了吗？ | Lab Meeting |
+| "这个方法 paper 里用过" | 那篇 paper 的方法适合你的数据吗？assumption 检验了吗？ | Reviewer 2 |
+| "我跑完流程了" | Pipeline 跑完 ≠ 分析完成。scientific question 回答了吗？ | Grant Revision |
+| "代码能跑" | 能 reproduce 吗？seed 固定了吗？version 记录了吗？ | Journal Submission |
+| "这个结果很奇怪" | 奇怪 = 要解释，不是忽略。追踪到哪一步出的问题？ | Lab Meeting |
 
-## 7-Item Academic Checklist (L3+ Mandatory)
+## 7 项学术检查清单（L3+ 强制完成）
 
-- [ ] **Method Verification**: Assumptions tested? Official docs/original paper cited?
-- [ ] **Result Verification**: QC metrics checked? Biologically plausible? Sensitivity analysis done?
-- [ ] **Evidence Chain**: Data provenance clear? Processing steps traceable?
-- [ ] **Reproducibility**: Seed fixed? Software versions recorded? Code runnable by others?
-- [ ] **Statistical Rigor**: Multiple testing correction? Effect size reported? CIs reported?
-- [ ] **Biological Significance**: Results biologically interpretable? Consistent with literature?
-- [ ] **Publication Ready**: Methods section standalone? Figures publication-quality?
+- [ ] **方法选择验证**: assumption 检验了吗？有官方文档/原始 paper 支撑吗？
+- [ ] **结果验证**: QC 指标检查了吗？结果在生物学上合理吗？敏感性分析做了吗？
+- [ ] **证据链检查**: 数据来源清晰吗？处理步骤可追溯吗？中间结果有检查点吗？
+- [ ] **可复现性检查**: seed 固定了吗？软件版本记录了吗？代码能被别人跑通吗？
+- [ ] **统计严谨性**: 多重检验校正做了吗？effect size 报告了吗？CI 报告了吗？
+- [ ] **生物学意义**: 结果能被生物学解释吗？和已有文献一致吗？
+- [ ] **发表准备**: Methods 可独立成文吗？Figure 能直接放进 paper 吗？
 
-## Integration with Other Skills
+## 与其他 Skill 的配合
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  bioinfo-autopilot (main skill)                     │
-│  - Bioinformatics methodology                       │
-│  - GWAS/RNA-seq/cohort workflows                    │
-│  - QC checks, evidence chain validation             │
+│  bioinfo-autopilot (主 skill)                        │
+│  - 生信分析方法论                                    │
+│  - GWAS/RNA-seq/cohort 等流程                       │
+│  - QC 检查、证据链验证                               │
 │                                                      │
-│  On failure ↓ invokes                               │
+│  失败时 ↓ 调用                                       │
 ├─────────────────────────────────────────────────────┤
-│  pua-academic (pressure engine)                     │
-│  - Reviewer 2 / Lab Meeting / Grant rhetoric        │
-│  - Academic anti-rationalization                    │
-│  - Proactivity level enforcement                    │
+│  pua-academic (压力引擎)                             │
+│  - Reviewer 2 / Lab Meeting / Grant 话术            │
+│  - 学术抗合理化                                      │
+│  - 能动性等级鞭策                                    │
 └─────────────────────────────────────────────────────┘
 ```
 
-## Installation
+## 安装
 
 ### CC Switch
 
@@ -170,64 +171,63 @@ ln -s ~/agents/pua-academic/skills/pua-academic ~/.cc-switch/skills/pua-academic
 ### Claude Code
 
 ```bash
-# Method 1: Symlink
+# 方法 1: Symlink
 ln -s /path/to/pua-academic/skills/pua-academic ~/.claude/skills/pua-academic
 
-# Method 2: Direct copy
+# 方法 2: 直接复制
 cp -r /path/to/pua-academic/skills/pua-academic ~/.claude/skills/
 ```
 
 ### Codex CLI
 
 ```bash
-# Symlink the canonical skill root into the Codex skills directory
+# 把规范 skill 根目录链接到 Codex skills 目录
 ln -s /path/to/pua-academic/skills/pua-academic ~/.codex/skills/pua-academic
 ```
 
-Use `skills/pua-academic` as the canonical install target so relative files such as `references/` resolve correctly. The repo's `codex/` directory is only a compatibility mirror for `SKILL.md`.
+推荐把 `skills/pua-academic` 作为唯一安装入口，这样 `references/` 等相对资源才能正常解析。仓库里的 `codex/` 目录只是 `SKILL.md` 的兼容镜像。
 
-## Trigger Conditions
+## 触发条件
 
-### Auto-Trigger
+### 自动触发
 
-The skill activates automatically when:
+以下任意情况出现时，skill 会自动激活：
 
-**Academic Failure:**
-- Analysis failed 2+ times
-- About to say "I cannot solve" / "Suggest manual handling"
-- QC anomaly but claiming "done"
+**学术失败类：**
+- 分析失败 2 次以上
+- 即将说 "我无法解决" / "建议手动处理"
+- QC 异常但声称 "完成"
 
-**Methodological Issues:**
-- Unreferenced method choice
-- Improper statistical methods
-- Conclusions beyond data support
+**方法学问题类：**
+- 方法选择无依据/无引用
+- 统计方法不当
+- 结论超出数据支撑
 
-**User Frustration Phrases:**
-- "Not rigorous" / "Where's the literature?" / "Where's the data?"
-- "Reproducible?" / "Sample size enough?" / "What's the p-value?"
+**用户沮丧短语：**
+- "不严谨" / "文献呢" / "数据呢"
+- "可复现吗" / "样本量够吗" / "p 值多少"
 - "reviewer 2" / "revise and resubmit"
 
-### Manual Trigger
+### 手动触发
 
 ```
-/pua-academic      # Activate academic pressure engine
-/reviewer2         # Enter Reviewer 2 mode directly
-/labmeeting        # Enter Lab Meeting mode directly
-/grant             # Enter Grant Revision mode directly
+/pua-academic      # 激活学术压力引擎
+/reviewer2         # 直接进入 Reviewer 2 模式
+/labmeeting        # 直接进入 Lab Meeting 模式
+/grant             # 直接进入 Grant Revision 模式
 ```
 
-## Recommended for Medical/Bioinformatics Tasks
+## 医学/生信场景推荐搭配
 
-For medical and bioinformatics tasks, we recommend using with **bioinfo-autopilot**:
+对于医学、生物信息学相关任务，推荐与 **bioinfo-autopilot** 配合使用：
 
 ```
 bioinfo-autopilot  ←→  pua-academic
-       ↓                      ↓
-  Bioinformatics           Academic Pressure
-  methodology              Engine
-       ↓                      ↓
-  GWAS/RNA-seq/           Reviewer 2/Lab Meeting
-  Single-cell/Cohort      /Grant Revision
+     ↓                       ↓
+  生信分析方法论         学术压力引擎
+     ↓                       ↓
+  GWAS/RNA-seq/         Reviewer 2/Lab Meeting
+  单细胞/队列分析        /Grant Revision
 ```
 
 **bioinfo-autopilot GitHub**: https://github.com/laleoarrow/bioinfo-autopilot
