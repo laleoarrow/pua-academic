@@ -160,6 +160,14 @@
 
 ## 安装
 
+### CC Switch
+
+```bash
+git clone https://github.com/laleoarrow/pua-academic.git ~/agents/pua-academic
+mkdir -p ~/.cc-switch/skills
+ln -s ~/agents/pua-academic/skills/pua-academic ~/.cc-switch/skills/pua-academic
+```
+
 ### Claude Code
 
 ```bash
@@ -173,9 +181,11 @@ cp -r /path/to/pua-academic/skills/pua-academic ~/.claude/skills/
 ### Codex CLI
 
 ```bash
-# Symlink 到 Codex skills 目录
-ln -s /path/to/pua-academic/codex/pua-academic ~/.codex/skills/pua-academic
+# 把规范 skill 根目录链接到 Codex skills 目录
+ln -s /path/to/pua-academic/skills/pua-academic ~/.codex/skills/pua-academic
 ```
+
+推荐把 `skills/pua-academic` 作为唯一安装入口，这样 `references/` 等相对资源才能正常解析。仓库里的 `codex/` 目录只是 `SKILL.md` 的兼容镜像。
 
 ## 触发条件
 

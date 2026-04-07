@@ -159,6 +159,14 @@ User invokes bioinfo-autopilot / Academic analysis task
 
 ## Installation
 
+### CC Switch
+
+```bash
+git clone https://github.com/laleoarrow/pua-academic.git ~/agents/pua-academic
+mkdir -p ~/.cc-switch/skills
+ln -s ~/agents/pua-academic/skills/pua-academic ~/.cc-switch/skills/pua-academic
+```
+
 ### Claude Code
 
 ```bash
@@ -172,9 +180,11 @@ cp -r /path/to/pua-academic/skills/pua-academic ~/.claude/skills/
 ### Codex CLI
 
 ```bash
-# Symlink to Codex skills directory
-ln -s /path/to/pua-academic/codex/pua-academic ~/.codex/skills/pua-academic
+# Symlink the canonical skill root into the Codex skills directory
+ln -s /path/to/pua-academic/skills/pua-academic ~/.codex/skills/pua-academic
 ```
+
+Use `skills/pua-academic` as the canonical install target so relative files such as `references/` resolve correctly. The repo's `codex/` directory is only a compatibility mirror for `SKILL.md`.
 
 ## Trigger Conditions
 

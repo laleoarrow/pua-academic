@@ -397,7 +397,7 @@ Apply academic pressure when research work is becoming sloppy, passive, under-va
 - Other（用户自由输入）
 
 **第二步：是否愿意分享 session**（仅在用户回答了第一步后）
-- "可以，脱敏后上传分析" — 上传脱敏 session 到 `https://pua-academic.pages.dev/api/feedback`
+- "可以，脱敏后上传分析" — 上传脱敏 session（注意：`https://pua-academic.pages.dev/api/feedback` endpoint 可能未部署；如果请求失败，改为本地记录并告知用户）
 - "不了，只保留本地" — 尊重隐私，反馈写入 `~/.pua-academic/feedback.jsonl`
 
 **脱敏规则**（上传时自动处理）：
@@ -466,90 +466,22 @@ Apply academic pressure when research work is becoming sloppy, passive, under-va
 
 ## 附录：常见学术场景应对
 
-### 场景一：被要求做新分析
-```
-审稿人要求补充分析 → 
-> 收到审稿意见，这是研究过程中的正常环节。先理解审稿人的关注点，然后设计合适的补充分析。
-> [学术生效] 主动检查了原始数据的质量 — 数据质量是分析的基础
-> 补充分析完成，方法学上经得起推敲。
-```
-
-### 场景二：结果不显著
-```
-主要假设检验 p > 0.05 →
-> 结果不显著不等于研究失败。先检查统计效力，再看效应量，最后考虑替代解释。
-> [学术生效] 计算了 post-hoc power — 效力不足是常见问题，不是你的错
-> 形成了完整的讨论框架，包括可能的解释和未来研究方向。
-```
-
-### 场景三：方法学挑战
-```
-现有方法无法解决问题 →
-> 遇到方法学瓶颈。首先穷尽文献，看看别人怎么解决的；其次考虑跨学科借鉴；最后可能需要方法学创新。
-> [学术生效] 搜索了相关领域的方法学文献 — 跨学科视角往往有惊喜
-> 找到了可行的替代方法，并验证了其适用性。
-```
-
-### 场景四：文献综述
-```
-需要系统性综述 →
-> 系统性综述需要 PRISMA 标准。先设计检索策略，再筛选文献，最后提取数据。
-> [学术生效] 建立了文献管理数据库 — 这是可复现性的一部分
-> 完成了完整的文献综述框架，包括质量评估。
-```
-
-### 场景五：论文修改
-```
-收到 Major Revision →
-> Major Revision 是给机会，不是拒稿。逐条回应，逐条修改，态度要诚恳，证据要充分。
-> [学术生效] 预判了审稿人可能的追问 — 提前准备比被动应对好
-> 修改稿准备完成，每条意见都有充分回应。
-```
+Read: `references/scenarios.md`.
 
 ## 附录：统计方法决策树
 
-```
-开始
-  │
-  ├── 研究目的是什么？
-  │   ├── 描述 → 描述性统计
-  │   ├── 比较 → 继续分支
-  │   ├── 关联 → 相关/回归
-  │   └── 预测 → 机器学习
-  │
-  ├── 如果是比较：
-  │   ├── 组数：2组 → t检验/Mann-Whitney
-  │   ├── 组数：>2组 → ANOVA/Kruskal-Wallis
-  │   ├── 是否重复测量？
-  │   │   ├── 是 → 配对检验/重复测量ANOVA
-  │   │   └── 否 → 独立样本检验
-  │   └── 数据正态吗？
-  │       ├── 是 → 参数检验
-  │       └── 否 → 非参数检验
-  │
-  └── 记得报告：效应量 + 置信区间 + p值
-```
+Read: `references/statistics-decision-tree.md`.
 
 ## 附录：审稿意见类型与应对
 
-| 审稿意见类型 | 含义 | 应对策略 |
-|------------|------|---------|
-| Accept | 接受 | 庆祝，准备校稿 |
-| Minor Revision | 小修 | 快速修改，态度积极 |
-| Major Revision | 大修 | 认真对待，逐条回应 |
-| Reject & Resubmit | 拒稿但可重投 | 大改后重新投 |
-| Reject | 拒稿 | 分析原因，改投他刊 |
+Read: `references/reviewer-translation.md`.
 
-### 常见审稿意见翻译
-
-| 审稿人说的 | 实际意思 | 你的回应 |
-|-----------|---------|---------|
-| "方法学不够清晰" | 我看不懂你怎么做的 | 详细补充，附流程图 |
-| "文献综述不完整" | 你没引用我的文章 | 检查并补充相关文献 |
-| "样本量不足" | 你的效力不够 | 做效力分析，或承认局限 |
-| "需要更多对照" | 我不信任你的结论 | 设计补充实验或分析 |
-| "讨论部分太长" | 你在啰嗦 | 删减，突出重点 |
-| "创新性不足" | 这文章很普通 | 强调差异化贡献 |
+## Context Management / 上下文管理
+This skill can be large. Follow these rules to manage context:
+- The core sections (红线、行为协议、Owner 意识、通用方法论、升级阶梯、检查清单) are always loaded.
+- Reference files (flavors, display-protocol, methodology-*, scenarios, statistics-decision-tree, reviewer-translation) are loaded only when needed.
+- If loaded by bioinfo-autopilot on failure, the AI should NOT also load bioinfo-autopilot's own pressure content (it was already removed as duplicate).
+- On simple tasks (single analysis, one-liner), skip banners and keep narration to 2 sentences (open + close).
 
 ---
 
