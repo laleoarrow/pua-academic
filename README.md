@@ -146,17 +146,17 @@
 
 ```
 ┌───────────────────────────────────────────┐
-│  bioinfo-autopilot (主 skill)             │
-│  - 生信分析方法论                         │
-│  - GWAS/RNA-seq/cohort 等流程             │
-│  - QC 检查、证据链验证                    │
+│  bioinfo-autopilot (primary skill)        │
+│  - Bioinformatics workflows               │
+│  - GWAS / RNA-seq / cohort pipelines      │
+│  - QC and evidence-chain checks           │
 │                                           │
-│  失败时 ↓ 调用                            │
+│  Falls back here on failure               │
 ├───────────────────────────────────────────┤
-│  pua-academic (压力引擎)                  │
-│  - Reviewer 2 / Lab Meeting / Grant 话术  │
-│  - 学术抗合理化                           │
-│  - 能动性等级鞭策                         │
+│  pua-academic (pressure engine)           │
+│  - Reviewer 2 / Lab Meeting / Grant modes │
+│  - Anti-rationalization pressure          │
+│  - Proactive rigor escalation             │
 └───────────────────────────────────────────┘
 ```
 
