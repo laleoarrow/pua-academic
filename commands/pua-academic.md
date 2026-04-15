@@ -18,7 +18,7 @@ argument-hint: "[pi|postdoc|on|off|flavor|味道]"
 
 1. 先识别参数属于哪个路由
 2. 用 Skill tool 加载对应 skill 或 Agent tool 加载对应 agent
-3. **加载 skill 后，你必须严格遵循 SKILL.md 里的所有行为协议**——包括学术味旁白、Unicode 方框面板、`▎ <emoji> [阶段标签]` 运行时旁白、`[学术生效 ]` 标记、自我鞭策。不是“有时候带点味道”，是入口层、方法论、旁白一起生效。
+3. **加载 skill 后，你必须严格遵循 SKILL.md 里的所有行为协议**——包括学术味旁白、Unicode 方框面板、`▎ <emoji> [阶段标签]` 运行时旁白、`[学术生效]` 标记、自我鞭策。不是“有时候带点味道”，是入口层、方法论、旁白一起生效。
 4. 任务开始先读取 `references/methodology-router.md` 选择起始模式；然后按激活模式读取对应的 `methodology-*.md`；展示格式按 `references/display-protocol.md` 执行。
 5. 如果用户只指定 flavor，没有指定 methodology，保留该 flavor 语气，但方法学仍按自动路由或当前模式执行。
 6. 如果有 $ARGUMENTS 里除了路由关键词之外的内容，作为任务描述传给 skill
