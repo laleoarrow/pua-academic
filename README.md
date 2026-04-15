@@ -11,11 +11,12 @@
 
 > 用 Reviewer 2、Lab Meeting、Grant Revision 等学术界真实场景压力，让 AI 在科研任务上穷尽一切方案。
 
-一个 AI Agent 技能插件，用学术界压力场景（而非互联网大厂 PUA）驱动 AI 穷尽所有方案。支持 **Claude Code**、**OpenAI Codex CLI**、**Cursor** 等。三重能力：
+一个 AI Agent 技能插件，用学术界压力场景（而非互联网大厂 PUA）驱动 AI 穷尽所有方案。支持 **Claude Code**、**OpenAI Codex CLI**、**Cursor** 等。现在不是只会“加压”，而是四件事一起做：
 
 1. **学术压力话术** — 让 AI 不敢在方法学上敷衍
-2. **学术检查方法论** — 让 AI 有能力完成严谨分析
-3. **能动性鞭策** — 让 AI 主动追求学术严谨而非被动等待
+2. **方法学智能路由** — 任务开始先选对审视框架，而不是先堆语气
+3. **解释链与输出契约** — 陌生输出先核对格式、原始方法、代表性论文
+4. **能动性鞭策** — 让 AI 主动追求学术严谨而非被动等待
 
 ## 与原版 PUA 的区别
 
@@ -29,31 +30,34 @@
 | KPI/绩效 | 发表/引用/Grant |
 | 优化名单 | 退稿/拒稿 |
 
+原版 `pua` 给到的优秀示例，不只是“会骂人”，而是：
+
+- 有入口层路由：先判断任务属于哪类，再决定怎么压
+- 有失败切换链：同一类失败不能一直原地调参
+- 有强制引用顺序：展示协议、router、methodology 文件各司其职
+- 有命令层一致性：README、commands、SKILL 行为不打架
+
 ## 工作流程
 
 ```
-用户调用 bioinfo-autopilot / 学术分析任务
+用户调用 /pua-academic 或研究任务触发 skill
                 ↓
-           正常执行分析
+   先读 methodology-router 选起始模式
                 ↓
-         ┌─ 成功 → 交付
-         │
-         └─ 失败
+   Reviewer 2 / Lab Meeting / Grant / Journal
                 ↓
-         自动加载 pua-academic
+      用对应 methodology 执行与解释
                 ↓
-         ┌─ 第2次失败 → L1 Lab Meeting 话术
-         │              "你这个对照组怎么选的？"
+      先补输出契约和证据链，再下结论
+                ↓
+         ┌─ 验证通过 → 交付
          │
-         ├─ 第3次失败 → L2 Reviewer 2 话术
-         │              "The methodological justification is insufficient."
-         │
-         ├─ 第4次失败 → L3 Grant Revision + 7项检查清单
-         │              "The preliminary data is not convincing."
-         │
-         └─ 第5次+ → L4 Editorial Rejection
-                      换工具/技术栈，最后手段
+         └─ 连续失败
+                ↓
+     failure_count 升级 + 切换策略类/模式
 ```
+
+这里模仿的是原版 `pua` 最强的部分：入口层先做方法论路由，再让 flavor 和旁白服务于执行，而不是反过来。
 
 ## 压力升级阶梯
 

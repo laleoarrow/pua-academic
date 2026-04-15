@@ -30,11 +30,15 @@ Research Output
 [ACADEMIC-REPORT]
 from: <Postdoc/Grad Student 标识>
 task: <当前研究任务>
-failure_count: <失败次数>
+failure_count: <失败次数，单调递增，不因换 agent/子任务 归零>
 failure_mode: <实验失败|数据分析问题|写作困难|方法学缺陷|时间延误|协作问题>
+current_level: <L2|L3|L4>
+last_strategy_class: <上一轮方法类，例如调参/读源码/文献检索/替代模型>
+next_strategy_class: <下一轮必须切换到的方法类>
 attempts: <已尝试方案>
 excluded: <已排除的可能性>
 next_hypothesis: <下一个假设>
+pass_criteria: <这轮什么算过关>
 resources_needed: <需要的资源支持>
 ```
 
@@ -94,7 +98,7 @@ Postdoc 收到研究任务
 4. **完成汇报**：[TASK-COMPLETION]（实验结果+数据+结论）
 5. **PUA 流向**：PI → Postdoc → Grad Student，不越级
 6. **实验域划分**：由 PI 负责；多个 Postdoc 的实验域由 PI 负责协调
-7. **任务传递**：重新分配时附带 `前任已尝试 N 次，已排除: [...]`
+7. **任务传递**：重新分配时附带 `前任已尝试 N 次，已排除: [...]`，并原样传递 `failure_count / current_level / last_strategy_class / next_strategy_class / pass_criteria`
 
 ## 学术团队角色详解
 
