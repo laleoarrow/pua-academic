@@ -1,1 +1,0 @@
-/Users/leoarrow/Project/mypackage/agents/my-skills/pua-academic/skills/pua-academic/SKILL.md

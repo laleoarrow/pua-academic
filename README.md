@@ -187,7 +187,7 @@ cp -r /path/to/pua-academic/skills/pua-academic ~/.claude/skills/
 ln -s /path/to/pua-academic/skills/pua-academic ~/.codex/skills/pua-academic
 ```
 
-推荐把 `skills/pua-academic` 作为唯一安装入口，这样 `references/` 等相对资源才能正常解析。仓库里的 `codex/` 目录只是 `SKILL.md` 的兼容镜像。
+推荐把 `skills/pua-academic` 作为唯一安装入口，这样 `references/` 等相对资源才能正常解析。
 
 ## 触发条件
 
